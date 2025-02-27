@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lời Nhắn Yêu Thương</title>
+    <style>
+        body {
+            background-color: #FFC0CB;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #D81B60;
+        }
+        .message-box {
+            background: white;
+            padding: 15px;
+            margin: 10px auto;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .message-box:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <h1>Gửi em yêu 💖</h1>
+    <div id="messages-container"></div>
+
+    <script>
+        const messages = [
+            "Em là điều tuyệt vời nhất trong cuộc đời anh! ❤️",
+            "Mỗi ngày bên em đều là một ngày hạnh phúc! 😊",
+            "Anh yêu nụ cười của em hơn bất cứ thứ gì! 😍",
+            "Dù có thế nào, anh vẫn luôn bên em! 💕",
+            "Em chính là cả thế giới của anh! 🌎💖"
+        ];
+
+        const container = document.getElementById("messages-container");
+        
+        messages.forEach(msg => {
+            let div = document.createElement("div");
+            div.className = "message-box";
+            div.textContent = msg;
+            container.appendChild(div);
+        });
+    </script>
+</body>
+</html>
